@@ -26,7 +26,7 @@
 
     <div id="regions-wrapper">
 
-    {{#region "packer" id="header-region" max_auto_assets="1" columns="24" column_width="40" gutter_width="0" sizes="s,m,l" default_size="s"}}
+    {{#region "packer" id="header-region" max_auto_assets="1" columns="16" column_width="60" gutter_width="0" sizes="s,m,l" default_size="s"}}
 
       {{#asset "text" size="l"}}
         {{{title}}}
@@ -46,7 +46,7 @@
       {{#asset "imagegroup" size="l"}}
         {{{title}}}
         <div class="content">
-          {{{imageslider images width="240" height="180"}}}
+          {{{imageslider images width="960" height="360"}}}
         </div>
         {{{description}}}
       {{/asset}}
@@ -54,7 +54,7 @@
       {{#asset "imagegroup" size="m"}}
         {{{title}}}
         <div class="content">
-          {{{imageslider images width="200" height="150"}}}
+          {{{imageslider images width="300" height="225"}}}
         </div>
         {{{description}}}
       {{/asset}}
@@ -62,7 +62,7 @@
       {{#asset "imagegroup" size="s"}}
         {{{title}}}
         <div class="content">
-          {{{imageslider images width="160" height="120"}}}
+          {{{imageslider images width="180" height="135"}}}
         </div>
         {{{description}}}
       {{/asset}}
@@ -70,7 +70,7 @@
       {{#asset "videogroup" size="l"}}
         {{{title}}}
         <div class="content">
-          {{{videoplayer videos width="240" height="180" resolution="large"}}}
+          {{{videoplayer videos width="960" height="720" resolution="large"}}}
         </div>
         {{{description}}}
       {{/asset}}
@@ -78,7 +78,7 @@
       {{#asset "videogroup" size="m"}}
         {{{title}}}
         <div class="content">
-          {{{videoplayer videos width="200" height="150" resolution="medium"}}}
+          {{{videoplayer videos width="300" height="225" resolution="medium"}}}
         </div>
         {{{description}}}
       {{/asset}}
@@ -86,7 +86,7 @@
       {{#asset "videogroup" size="s"}}
         {{{title}}}
         <div class="content">
-          {{{videoplayer videos width="160" height="120" resolution="small"}}}
+          {{{videoplayer videos width="180" height="135" resolution="small"}}}
         </div>
         {{{description}}}
       {{/asset}}
@@ -121,7 +121,7 @@
         </ul>
       {{/asset}}
  
-      {{#asset "embedgroup" size="l" width="240"}}
+      {{#asset "embedgroup" size="l" width="960"}}
         {{{title}}}
         <div class="content">
           {{#embeds}}
@@ -131,7 +131,7 @@
         {{{description}}}
       {{/asset}}
 
-      {{#asset "embedgroup" size="m" width="200"}}
+      {{#asset "embedgroup" size="m" width="300"}}
         {{{title}}}
         <div class="content">
           {{#embeds}}
@@ -141,7 +141,7 @@
         {{{description}}}
       {{/asset}}
 
-      {{#asset "embedgroup" size="s" width="160"}}
+      {{#asset "embedgroup" size="s" width="180"}}
         {{{title}}}
         <div class="content">
           {{#embeds}}
