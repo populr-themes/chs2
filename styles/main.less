@@ -66,11 +66,43 @@
 
 // Pop title
 #pop-title {
-  margin: 40px auto;
+  margin: 20px auto;
   .headline-font();
   font-size: 54px;
   line-height: 1.1;
   text-align: center;
+}
+
+#navigation {
+  width: auto;
+  margin: 20px;
+  padding: 0 5px;
+  background-color: #f5f5f5;
+  color: #ccc;
+  .body-font();
+  .border-radius(5px);
+  border: 1px solid #ccc;
+  a {
+    color: @accent-color;
+    &:hover {
+      color: lighten(@accent-color, 20%);
+      background-color: #f9f9f9;
+    }
+    &:active { color: lighten(@accent-color, 40%); }
+    padding: 6px 9px;
+  }
+  li {
+    display: inline-block;
+    padding: 6px 0;
+    &:after {
+      display: inline-block;
+      content: '|';
+      margin-right: -4px;
+    }
+  }
+  li:last-child {
+    &:after { display: none; }
+  }
 }
 
 // Columnizer rows & columns
@@ -278,6 +310,12 @@
 *:first-child+html .clearfix { zoom: 1; } /* IE7 */
 
 #header-region {
+
+  .asset-size-l { width: 240px; }
+  .asset-size-m { width: 200px; }
+  .asset-size-s { width: 160px; }
+  // .columnizer-row { margin: 0 auto; }
+  // .columnizer-row:first-child { margin-top: 10px; }
   .asset-title {
     color: #111;
     font-weight: 700;
@@ -333,9 +371,12 @@
     .content {
       float: right;
       margin-top: 0;
-      width: 130px;
+      width: 120px;
+      padding: 5px;
+      background-color: #fff;
+      .box-shadow(0 0 4px #999);
     }
-    .asset-title { width: 325px; }
+    .asset-title { width: 330px; }
   }
 
   .asset-type-imagegroup.asset-size-3, .asset-type-videogroup.asset-size-3, .asset-type-embedgroup.asset-size-3 {
@@ -346,6 +387,7 @@
 
 #footer-region {
   padding: 1px 0;
+  min-height: 10px;
   #gradient > .vertical(lighten(@accent-color, 15%), @accent-color);
 
   .asset-title { color: #fff !important; }
@@ -419,10 +461,11 @@ to make your theme look really good on mobile devices. */
 
     .asset-type-imagegroup.asset-size-2 {
       .content {
-        float: none !important;
-        margin-top: 10px !important;
+        float: left !important;
+        margin-right: 10px !important;
+        margin-bottom: 4px !important;
       }
-      .asset-title { width: 325px !important; }
+      .asset-title { width: auto !important; }
     }
 
     .asset-type-imagegroup.asset-size-3, .asset-type-videogroup.asset-size-3, .asset-type-embedgroup.asset-size-3 {

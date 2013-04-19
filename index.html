@@ -26,13 +26,140 @@
 
     <div id="regions-wrapper">
 
+    {{#region "packer" id="header-region" max_auto_assets="1" columns="24" column_width="40" gutter_width="0" sizes="s,m,l" default_size="s"}}
+
+      {{#asset "text" size="l"}}
+        {{{title}}}
+        {{{body}}}
+      {{/asset}}
+
+      {{#asset "text" size="m"}}
+        {{{title}}}
+        {{{body}}}
+      {{/asset}}
+
+      {{#asset "text" size="s"}}
+        {{{title}}}
+        {{{body}}}
+      {{/asset}}
+
+      {{#asset "imagegroup" size="l"}}
+        {{{title}}}
+        <div class="content">
+          {{{imageslider images width="240" height="180"}}}
+        </div>
+        {{{description}}}
+      {{/asset}}
+ 
+      {{#asset "imagegroup" size="m"}}
+        {{{title}}}
+        <div class="content">
+          {{{imageslider images width="200" height="150"}}}
+        </div>
+        {{{description}}}
+      {{/asset}}
+  
+      {{#asset "imagegroup" size="s"}}
+        {{{title}}}
+        <div class="content">
+          {{{imageslider images width="160" height="120"}}}
+        </div>
+        {{{description}}}
+      {{/asset}}
+  
+      {{#asset "videogroup" size="l"}}
+        {{{title}}}
+        <div class="content">
+          {{{videoplayer videos width="240" height="180" resolution="large"}}}
+        </div>
+        {{{description}}}
+      {{/asset}}
+
+      {{#asset "videogroup" size="m"}}
+        {{{title}}}
+        <div class="content">
+          {{{videoplayer videos width="200" height="150" resolution="medium"}}}
+        </div>
+        {{{description}}}
+      {{/asset}}
+
+      {{#asset "videogroup" size="s"}}
+        {{{title}}}
+        <div class="content">
+          {{{videoplayer videos width="160" height="120" resolution="small"}}}
+        </div>
+        {{{description}}}
+      {{/asset}}
+
+      {{#asset "documentgroup" size="l"}}
+        {{{title}}}
+        {{{description}}}
+        <ul class="documents">
+          {{#documents}}
+            <li><a href="{{original_url}}"><div class="document-icon"><div class="file-extension file-extension-{{extension}}"></div></div><div class="document-title">{{title}}</div></a></li>
+          {{/documents}}
+        </ul>
+      {{/asset}}
+ 
+      {{#asset "documentgroup" size="m"}}
+        {{{title}}}
+        {{{description}}}
+        <ul class="documents">
+          {{#documents}}
+            <li><a href="{{original_url}}"><div class="document-icon"><div class="file-extension file-extension-{{extension}}"></div></div><div class="document-title">{{title}}</div></a></li>
+          {{/documents}}
+        </ul>
+      {{/asset}}
+ 
+      {{#asset "documentgroup" size="s"}}
+        {{{title}}}
+        {{{description}}}
+        <ul class="documents">
+          {{#documents}}
+            <li><a href="{{original_url}}"><div class="document-icon"><div class="file-extension file-extension-{{extension}}"></div></div><div class="document-title">{{title}}</div></a></li>
+          {{/documents}}
+        </ul>
+      {{/asset}}
+ 
+      {{#asset "embedgroup" size="l" width="240"}}
+        {{{title}}}
+        <div class="content">
+          {{#embeds}}
+            <div class="embed">{{{html}}}</div>
+          {{/embeds}}
+        </div>
+        {{{description}}}
+      {{/asset}}
+
+      {{#asset "embedgroup" size="m" width="200"}}
+        {{{title}}}
+        <div class="content">
+          {{#embeds}}
+            <div class="embed">{{{html}}}</div>
+          {{/embeds}}
+        </div>
+        {{{description}}}
+      {{/asset}}
+
+      {{#asset "embedgroup" size="s" width="160"}}
+        {{{title}}}
+        <div class="content">
+          {{#embeds}}
+            <div class="embed">{{{html}}}</div>
+          {{/embeds}}
+        </div>
+        {{{description}}}
+      {{/asset}}
+
+    {{/region}}
+
     {{{title}}}
 
-    <ul>
+    <ul id="navigation">
       {{#each pop.contents}}
         {{#if_equal layout.size "1"}}
           {{#if_equal type "Text"}}
-            <a href="#{{{cssify title_raw}}}">{{{title_raw}}}</a>
+            <li><a href="#{{{cssify title_raw}}}">{{{strip_html title_raw}}}</a></li>
           {{/if_equal}}
         {{/if_equal}}
       {{/each}}
@@ -66,7 +193,7 @@
  
       {{#asset "imagegroup" size="2"}}
         <div class="content">
-          {{{imageslider images width="130" height="130"}}}
+          {{{imageslider images width="120" height="120"}}}
         </div>
         {{{title}}}
         {{{description}}}
@@ -169,6 +296,7 @@
     {{#region "columnizer" id="footer-region" max_cols="3" max_auto_assets="1" dummy_content="T-1,T-1,T-1"}}
 
       {{#asset "text" size="1"}}
+        <a id="{{{cssify title_raw}}}" />
         {{{title}}}
         {{{body}}}
       {{/asset}}
