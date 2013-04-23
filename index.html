@@ -26,7 +26,7 @@
 
     <div id="regions-wrapper">
 
-    {{#region "packer" id="header-region" max_auto_assets="1" columns="16" column_width="60" gutter_width="0" sizes="s,m,l" default_size="s"}}
+    {{#region "packer" id="header-region" max_auto_assets="1" columns="16" column_width="59" gutter_width="1" sizes="s,m,l" default_size="s"}}
 
       {{#asset "text" size="l"}}
         {{{title}}}
@@ -46,7 +46,7 @@
       {{#asset "imagegroup" size="l"}}
         {{{title}}}
         <div class="content">
-          {{{imageslider images width="960" height="360"}}}
+          {{{imageslider images width="1000" height="360"}}}
         </div>
         {{{description}}}
       {{/asset}}
@@ -61,34 +61,34 @@
   
       {{#asset "imagegroup" size="s"}}
         {{{title}}}
+        {{{description}}}
         <div class="content">
           {{{imageslider images width="180" height="135"}}}
         </div>
-        {{{description}}}
       {{/asset}}
   
       {{#asset "videogroup" size="l"}}
         {{{title}}}
+        {{{description}}}
         <div class="content">
           {{{videoplayer videos width="960" height="720" resolution="large"}}}
         </div>
-        {{{description}}}
       {{/asset}}
 
       {{#asset "videogroup" size="m"}}
         {{{title}}}
+        {{{description}}}
         <div class="content">
           {{{videoplayer videos width="300" height="225" resolution="medium"}}}
         </div>
-        {{{description}}}
       {{/asset}}
 
       {{#asset "videogroup" size="s"}}
         {{{title}}}
+        {{{description}}}
         <div class="content">
           {{{videoplayer videos width="180" height="135" resolution="small"}}}
         </div>
-        {{{description}}}
       {{/asset}}
 
       {{#asset "documentgroup" size="l"}}
@@ -123,37 +123,35 @@
  
       {{#asset "embedgroup" size="l" width="960"}}
         {{{title}}}
+        {{{description}}}
         <div class="content">
           {{#embeds}}
             <div class="embed">{{{html}}}</div>
           {{/embeds}}
         </div>
-        {{{description}}}
       {{/asset}}
 
       {{#asset "embedgroup" size="m" width="300"}}
         {{{title}}}
+        {{{description}}}
         <div class="content">
           {{#embeds}}
             <div class="embed">{{{html}}}</div>
           {{/embeds}}
         </div>
-        {{{description}}}
       {{/asset}}
 
       {{#asset "embedgroup" size="s" width="180"}}
         {{{title}}}
+        {{{description}}}
         <div class="content">
           {{#embeds}}
             <div class="embed">{{{html}}}</div>
           {{/embeds}}
         </div>
-        {{{description}}}
       {{/asset}}
 
     {{/region}}
-
-    {{{title}}}
 
     <ul id="navigation">
       {{#each pop.contents}}
