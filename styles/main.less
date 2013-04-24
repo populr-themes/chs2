@@ -326,12 +326,18 @@ body { background-color: #ddd; }
 *:first-child+html .clearfix { zoom: 1; } /* IE7 */
 
 #header-region {
-  width: 960px;
+  width: 1000px;
   margin: 0 auto;
 
-  .asset-size-l { width: 960px; }
+  .asset-size-l { width: 1000px; }
   .asset-size-m { width: 300px; }
-  .asset-size-s { width: 180px; }
+  .asset-size-s { width: 200px; }
+
+  .asset-inner {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
   .asset-title {
     color: #111;
     font-weight: 700;
@@ -339,7 +345,8 @@ body { background-color: #ddd; }
 
   .asset-type-imagegroup.asset-size-l {
     width: 1000px;
-    margin-left: -20px;
+    margin: 0 auto;
+    .asset-inner { padding: 0; }
     .asset-title, .description {
       padding-left: 20px;
       padding-right: 20px;
