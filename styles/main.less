@@ -102,6 +102,14 @@ body { background-color: #ddd; }
   li:last-child {
     &:after { display: none; }
   }
+  .ie7 & {
+    li {
+      display: inline;
+      &:after {
+        display: inline;
+      }
+    }
+  }
 }
 
 // Columnizer rows & columns
@@ -161,6 +169,14 @@ body { background-color: #ddd; }
     }
   }
 }
+
+// Commenting this out on 7/9/13
+// Not sure when this code was added, but the theme has been working fine without it,
+// so I'm commenting it out before adding the IE7 fix
+// .populr-image-slider .slideshow .linked {
+//   display: table-row !important;
+//   position: relative;
+// }
 
 // Video assets
 .asset-type-videogroup .video-js { margin-bottom: 15px; }
