@@ -34,7 +34,7 @@ body { background-color: #ddd; }
   line-height: @body-line-height;
 }
 
-.description, .content, .body, p, li { .body-font(); }
+.description, .content, .body { .body-font(); }
 
 /* END TYPOGRAPHY */
 
@@ -140,7 +140,7 @@ body { background-color: #ddd; }
     font-size: 34px;
     text-align: center;
   }
-  .description, .body, p, li {
+  .description, .body {
     font-size: 16px;
   }
 }
@@ -442,7 +442,7 @@ body { background-color: #ddd; }
   #gradient > .vertical(lighten(@accent-color, 15%), @accent-color);
 
   .asset-title { color: #fff !important; }
-  .description, .content, .body, p, li { color: #fff !important; }
+  .description, .content, .body { color: #fff !important; }
 
   a {
     color: #fff;
@@ -479,7 +479,7 @@ to make your theme look really good on mobile devices. */
     text-align: left !important;
   }
 
-  .description, .body, p, li {
+  .description, .body {
     font-size: 14px !important;
     text-align: left !important;
   }
